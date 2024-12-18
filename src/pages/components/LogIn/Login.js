@@ -46,8 +46,6 @@ const Login = () => {
       setLoading(false); // Stop loading
       localStorage.setItem("user", JSON.stringify(data));
       router.reload();
-      // Redirect or perform further actions
-      console.log("Login successful:", data.user);
     } catch (error) {
       setError(error.message);
       setLoading(false); // Stop loading
@@ -120,7 +118,7 @@ const Login = () => {
           )}
 
           {success && (
-            <div className="text-green-500 mb-4">Login successful!</div>
+            <div className="text-green-500 mb-4">{success}</div>
           )}
           {error && <div className="text-red-500 mb-4">{error}</div>}
 

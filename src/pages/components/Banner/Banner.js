@@ -20,7 +20,7 @@ const Banner = () => {
         </p>
         <Link
           href="/components/Booking/Booking"
-          className="bg-yellow-500 text-black px-8 py-3 rounded-full text-lg font-semibold hover:bg-yellow-600 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg"
+          className="bg-yellow-500 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-yellow-600 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg"
         >
           Book Your Table Now
         </Link>

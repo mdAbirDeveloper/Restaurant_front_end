@@ -68,7 +68,7 @@ const Order = () => {
   };
 
   return (
-    <div className="container mx-auto p-6 min-h-screen">
+    <div className="container mx-auto p-6 min-h-screen bg-white">
       <h1 className="text-2xl font-bold text-gray-800 mb-4 text-center">Your Orders</h1>
 
       {loading ? (
@@ -93,7 +93,7 @@ const Order = () => {
                 ?.slice()
                 .reverse()
                 .map((order) => (
-                  <tr key={order._id} className="border-t border-gray-200">
+                  <tr key={order._id} className="border-t border-gray-200 text-black">
                     <td className="py-3 px-6">{order.foodName}</td>
                     <td className="py-3 px-6">{order.foodPrice}</td>
                     <td className="py-3 px-6">{order.quantity}</td>

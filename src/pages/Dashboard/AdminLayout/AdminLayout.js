@@ -44,9 +44,7 @@ const AdminLayout = ({ children }) => {
         <div className="w-52 shadow-md p-2  hidden md:block">
           <ul>
             <li className="text-white text-lg mr-2 uppercase font-serif bg-green-500 text-center mb-2 p-3">
-              <Link href={"/Dashboard/DComponents/Users/Users"}>
-                Users
-              </Link>
+              <Link href={"/Dashboard/DComponents/Users/Users"}>Users</Link>
             </li>
             <li className="text-white text-lg mr-2 uppercase font-serif bg-green-500 text-center mb-2 p-3">
               <Link href={"/Dashboard/DComponents/Booking/Booking"}>
@@ -54,19 +52,13 @@ const AdminLayout = ({ children }) => {
               </Link>
             </li>
             <li className="text-white text-lg mr-2 uppercase font-serif bg-green-500 text-center mb-2 p-3">
-              <Link href={"/Dashboard/DComponents/Food/AddFood"}>
-                Add Food
-              </Link>
+              <Link href={"/Dashboard/DComponents/Food/AddFood"}>Add Food</Link>
             </li>
             <li className="text-white text-lg mr-2 uppercase font-serif bg-green-500 text-center mb-2 p-3">
-              <Link href={"/Dashboard/DComponents/Food/AllFood"}>
-                All Food
-              </Link>
+              <Link href={"/Dashboard/DComponents/Food/AllFood"}>All Food</Link>
             </li>
             <li className="text-white text-lg mr-2 uppercase font-serif bg-green-500 text-center mb-2 p-3">
-              <Link href={"/Dashboard/DComponents/Orders/Orders"}>
-                Orders
-              </Link>
+              <Link href={"/Dashboard/DComponents/Orders/Orders"}>Orders</Link>
             </li>
             <li className="text-white text-lg mr-2 uppercase font-serif bg-green-500 text-center mb-2 p-3">
               <Link href={"/Dashboard/DComponents/Messages/Messages"}>

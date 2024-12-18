@@ -127,7 +127,7 @@ const Booking = () => {
                 <td className="border py-2 px-4 text-center">
                   {new Date(booking.date).toLocaleDateString()}
                 </td>
-                <td className="border py-2 px-4 text-center">{booking.time}</td>
+                <td className="border py-2 px-4 text-center">{booking.timeHour}:{booking.timePeriod}</td>
                 <td className="border py-2 px-4 text-center">
                   <div className="flex justify-around">
                     <button

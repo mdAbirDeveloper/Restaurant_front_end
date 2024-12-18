@@ -21,7 +21,7 @@ const Navbar = () => {
   const handleLogout = () => {
     localStorage.removeItem("user");
     setUser(null);
-    router.reload();
+    router.push("/components/LogIn/Login");
   };
 
   const toggleMenu = () => {
@@ -34,7 +34,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gradient-to-r from-blue-500 to-green-400 text-white">
+    <nav className="bg-slate-100 text-white">
       <div className="container mx-auto flex justify-between items-center">
         <div className="">
           <img src="/logo.png" className="w-20 ml-2" />
@@ -42,7 +42,7 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 ">
-          <li className="bg-blue-600 px-4 py-2 rounded font-bold">
+          <li className="bg-yellow-400 px-4 py-2 rounded font-bold">
             <Link
               href="/"
               className="text-white hover:text-yellow-300 transition duration-300 ease-in-out transform hover:scale-110"
@@ -50,7 +50,7 @@ const Navbar = () => {
               Home
             </Link>
           </li>
-          <li className="bg-blue-600 px-4 py-2 rounded font-bold">
+          <li className="bg-yellow-400 px-4 py-2 rounded font-bold">
             <Link
               href="/components/About/About"
               className="text-white hover:text-yellow-300 transition duration-300 ease-in-out transform hover:scale-110"
@@ -58,7 +58,7 @@ const Navbar = () => {
               About
             </Link>
           </li>
-          <li className="bg-blue-600 px-4 py-2 rounded font-bold">
+          <li className="bg-yellow-400 px-4 py-2 rounded font-bold">
             <Link
               href="/components/Menu/Menu"
               className="text-white hover:text-yellow-300 transition duration-300 ease-in-out transform hover:scale-110"
@@ -66,7 +66,7 @@ const Navbar = () => {
               Foods
             </Link>
           </li>
-          {/* <li className="bg-blue-600 px-4 py-2 rounded font-bold">
+          {/* <li className="bg-yellow-400 px-4 py-2 rounded font-bold">
             <Link
               href="/components/Gallery/Gallery"
               className="text-white hover:text-yellow-300 transition duration-300 ease-in-out transform hover:scale-110"
@@ -74,7 +74,7 @@ const Navbar = () => {
               Gallery
             </Link>
           </li> */}
-          <li className="bg-blue-600 px-4 py-2 rounded font-bold">
+          <li className="bg-yellow-400 px-4 py-2 rounded font-bold">
             <Link
               href="/components/Contact/Contact"
               className="text-white hover:text-yellow-300 transition duration-300 ease-in-out transform hover:scale-110"
@@ -82,7 +82,7 @@ const Navbar = () => {
               Contact
             </Link>
           </li>
-          <li className="bg-blue-600 px-4 py-2 rounded font-bold">
+          <li className="bg-yellow-400 px-4 py-2 rounded font-bold">
             <Link
               href="/components/Booking/Booking"
               className="text-white hover:text-yellow-300 transition duration-300 ease-in-out transform hover:scale-110"
@@ -90,8 +90,8 @@ const Navbar = () => {
               Booking
             </Link>
           </li>
-          {user?.userId && (
-            <li className="bg-blue-600 px-4 py-2 rounded font-bold">
+          {user?.phone && (
+            <li className="bg-yellow-400 px-4 py-2 rounded font-bold">
               <Link
                 href="/components/Order/Order"
                 className="text-white hover:text-yellow-300 transition duration-300 ease-in-out transform hover:scale-110"
@@ -102,9 +102,9 @@ const Navbar = () => {
           )}
           {user?.name && user?.phone == "01832822560" && (
             <>
-              <li className="bg-blue-600 px-4 py-2 rounded font-bold">
+              <li className="bg-yellow-400 px-4 py-2 rounded font-bold">
                 <Link
-                  href="/Dashboard/AdminLayout/AdminLayout"
+                  href="/Dashboard/AdminLayout"
                   className="text-white hover:text-yellow-300 transition duration-300 ease-in-out transform hover:scale-110"
                 >
                   Dashboard
@@ -114,7 +114,7 @@ const Navbar = () => {
           )}
           {user?.phone ? (
             <>
-              <li onClick={handleLogout} className="bg-blue-600 px-4 py-2 rounded font-bold">
+              <li onClick={handleLogout} className="bg-yellow-400 px-4 py-2 rounded font-bold">
                 <Link
                   href="/components/LogIn/Login"
                   className="text-white hover:text-yellow-300 transition duration-300 ease-in-out transform hover:scale-110"
@@ -125,7 +125,7 @@ const Navbar = () => {
             </>
           ) : (
             <>
-              <li className="bg-blue-600 px-4 py-2 rounded font-bold">
+              <li className="bg-yellow-400 px-4 py-2 rounded font-bold">
                 <Link
                   href="/components/LogIn/Login"
                   className="text-white hover:text-yellow-300 transition duration-300 ease-in-out transform hover:scale-110"
@@ -167,7 +167,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <ul className="flex-col md:hidden space-y-4 bg-purple-500 p-4">
+        <ul className="flex-col md:hidden space-y-4 bg-yellow-600 p-4">
           <Link
             onClick={closeMenu}
             href="/"
@@ -229,7 +229,7 @@ const Navbar = () => {
             <>
               <Link
                 onClick={closeMenu}
-                href="/Dashboard/AdminLayout/AdminLayout"
+                href="/Dashboard/AdminLayout"
                 className="text-white hover:text-yellow-300 transition duration-300 ease-in-out transform hover:scale-110"
               >
                 <li className="border text-center py-2 rounded-lg  mt-2">
